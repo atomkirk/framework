@@ -276,6 +276,19 @@ trait MakesHttpRequests
     /**
      * Assert that the JSON response has a given structure.
      *
+     * Example: 
+     * ```
+     * seeJsonStructure([
+     *      // This would check for an array
+     *      '*' => [
+     *          // This would check for keys
+     *          'id', 
+     *          'name',
+     *          'email'
+     *      ]
+     * ]);
+     * ```
+     *
      * @param  array|null  $structure
      * @param  array|null  $responseData
      * @return $this
